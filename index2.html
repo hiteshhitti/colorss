@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Floating Footer Design</title>
+<style>
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to top, #000000 0%, #222222 60%);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  main h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+    user-select: none;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    background: #2466e5;
+    color: rgba(255 255 255 / 0.9);
+    text-align: center;
+    padding: 60px 20px 30px;
+    overflow: hidden;
+    
+  }
+
+  /* Wave shapes */
+  footer::before,
+  footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 120px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 50% 100%;
+    transform-origin: center bottom;
+  }
+  footer::before {
+    top: -80px;
+    background-image: url("data:image/svg+xml,%3Csvg width='1600' height='120' viewBox='0 0 1600 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40C200 100 400 0 800 40C1200 80 1400 80 1600 40V120H0V40Z' fill='%232a49f7' fill-opacity='0.7'/%3E%3C/svg%3E");
+    animation: waveMove 6s linear infinite;
+    z-index: 1;
+  }
+  footer::after {
+    top: -30px;
+    background-image: url("data:image/svg+xml,%3Csvg width='1600' height='120' viewBox='0 0 1600 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60C200 20 400 100 800 60C1200 20 1400 20 1600 60V120H0V60Z' fill='%23408cff' fill-opacity='0.9'/%3E%3C/svg%3E");
+    animation: waveMoveReverse 8s linear infinite;
+    z-index: 2;
+  }
+
+  @keyframes waveMove {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1600px; }
+  }
+  @keyframes waveMoveReverse {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1600px; }
+  }
+
+  /* Footer content container to elevate above waves */
+  .footer-content {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Social icons container */
+  .social-icons {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .social-icons a {
+    color: rgba(255 255 255 / 0.8);
+    font-size: 28px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover, .social-icons a:focus {
+    color: #dbe3ff;
+  }
+
+  /* Navigation links */
+  .footer-nav {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-nav a {
+    color: rgba(255 255 255 / 0.9);
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.25s ease;
+  }
+  .footer-nav a:hover, .footer-nav a:focus {
+    color: #dbe3ff;
+    text-decoration: underline;
+  }
+
+  /* Copyright */
+  .footer-copy {
+    font-size: 0.875rem;
+    color: rgba(255 255 255 / 0.6);
+    user-select: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    main h1 {
+      font-size: 2.5rem;
+      padding: 0 10px;
+    }
+    .social-icons {
+      gap: 20px;
+    }
+    .social-icons a {
+      font-size: 24px;
+    }
+    .footer-nav {
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<!-- Google Material Icons CDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+</head>
+<body>
+  <main>
+    <h1>Website Footers</h1>
+  </main>
+
+  <footer role="contentinfo" aria-label="Website footer with social links and navigation">
+    <div class="footer-content">
+      <nav class="social-icons" aria-label="Social media links">
+        <a href="#" aria-label="Facebook" title="Facebook" tabindex="0">
+          <span class="material-icons" aria-hidden="true">facebook</span>
+        </a>
+        <a href="#" aria-label="Twitter" title="Twitter" tabindex="0">
+          <span class="material-icons" aria-hidden="true">twitter</span>
+        </a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn" tabindex="0">
+          <span class="material-icons">linkedin</span>
+        </a>
+        <a href="#" aria-label="Instagram" title="Instagram" tabindex="0">
+          <span class="material-icons" aria-hidden="true">instagram</span>
+        </a>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Footer navigation links">
+        <a href="#home" tabindex="0">Home</a>
+        <a href="#about" tabindex="0">About</a>
+        <a href="#services" tabindex="0">Services</a>
+        <a href="#team" tabindex="0">Team</a>
+        <a href="#contact" tabindex="0">Contact</a>
+      </nav>
+
+      <p class="footer-copy" aria-live="polite">
+        ©2021 Nadine Coelho | All Rights Reserved
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+

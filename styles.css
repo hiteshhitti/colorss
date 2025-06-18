@@ -1,3 +1,21 @@
+body {
+  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center center / cover no-repeat fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white; /* Optional */
+}
+
+section {
+  padding: 100px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay */
+  backdrop-filter: blur(3px); /* Optional blur */
+}
+
+
+
+
 /* Stylish Sticky Contact Button */
 .sticky-contact {
   position: fixed;
@@ -108,7 +126,8 @@ body {
 /* HERO SECTION */
 .hero {
   height: 100vh;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+ 
+  background-position: fixed;
   position: relative;
   display: flex;
   justify-content: center;
@@ -158,7 +177,7 @@ body {
 /* ABOUT SECTION */
 .about-section {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+ 
   position: relative;
   min-height: 100vh;
 }
@@ -166,7 +185,6 @@ body {
 .about-section .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.75);
   z-index: 1;
 }
 
@@ -178,7 +196,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 94, 0, 0.2);
+  
   animation: fadeInUp 1s ease;
 }
 
@@ -221,7 +239,7 @@ body {
 /* SERVICES SECTION */
 .services-section {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+  
   position: relative;
   min-height: 100vh;
 }
@@ -229,7 +247,6 @@ body {
 .services-section .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.75);
   z-index: 1;
 }
 
@@ -239,7 +256,7 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.05);
+ 
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(255, 94, 0, 0.2);
   animation: fadeInUp 1s ease;
@@ -305,7 +322,6 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
@@ -632,7 +648,7 @@ body {
 }
 
 .gallery-swiper-box .swiper-slide {
-  background: #1a1a1a;
+  background: #d12929;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -669,20 +685,19 @@ body {
 
 
 
-
 /* WHY US Section */
 .whyus-section, .strengths-section {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
   position: relative;
   color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 .whyus-section .overlay,
 .strengths-section .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  
   z-index: 1;
 }
 
@@ -712,7 +727,7 @@ body {
 .strengths-list {
   text-align: left;
   max-width: 900px;
-  margin: 0 auto;
+  margin:  auto;
   color: #ccc;
   font-size: 1rem;
   padding-left: 20px;
@@ -735,124 +750,86 @@ body {
 
 
 
-.site-footer {
-  background: #111;
-  color: #ccc;
-  padding: 60px 30px 30px;
-  font-size: 0.95rem;
+/* Footer CSS */
+.footer {
+  background: #121212;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  color: #f57c00;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 50px  20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 200px;
+  top: -80px;
+  left: -25%;
+  background: linear-gradient(120deg, #f57c00 0%, #ff9800 100%);
+  transform: rotate(-8deg);
+  animation: wave 8s infinite linear alternate;
+  opacity: 0.2;
+}
+
+@keyframes wave {
+  0% { transform: rotate(-8deg) translateX(0); }
+  100% { transform: rotate(-8deg) translateX(60px); }
 }
 
 .footer-container {
+  max-width: 1300px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
   justify-content: space-between;
+  gap: 30px;
 }
 
-.footer-col {
-  flex: 1 1 300px;
+.footer-logo h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.footer-logo {
-  font-size: 1.8rem;
-  color: #ff5e00;
+.footer-logo p {
+  font-size: 14px;
+  color: #dddddd;
 }
 
-.footer-logo .logo-c {
-  color: #ff5e00;
-  font-weight: bold;
-  font-size: 2rem;
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.footer-logo .logo-sub {
-  color: #fff;
-  font-weight: 600;
-}
-
-.footer-col h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #ff5e00;
-}
-
-.footer-links {
+.footer-links ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links li {
-  margin-bottom: 10px;
+.footer-links ul li {
+  margin: 6px 0;
 }
 
-.footer-links a {
-  color: #ccc;
+.footer-links ul li a {
+  color: #f57c00;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.footer-links a:hover {
-  color: #ff5e00;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #ccc;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ff5e00;
-}
-
-.footer-bottom {
-  border-top: 1px solid #333;
-  margin-top: 40px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #777;
+.footer-links ul li a:hover {
+  color: #ffffff;
 }
 
 
-/* Chat Icon */
-.chat-box-wrapper {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99999;
+.footer-contact i {
+  color: #ff5722;
+  margin-right: 8px;
 }
-
-.chat-icon {
-  background: #ff5e00;
-  color: #fff;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  font-size: 24px;
-  text-align: center;
-  line-height: 55px;
-  box-shadow: 0 0 15px rgba(255, 94, 0, 0.5);
-  cursor: pointer;
-  animation: pulse 2s infinite;
-  transition: background 0.3s ease;
-}
-
-.chat-icon:hover {
-  background: #e14a00;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
