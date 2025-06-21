@@ -879,7 +879,7 @@ body {
   z-index: 1000;
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  /* right: 1rem; */
 }
 @media (max-width: 768px) {
 
