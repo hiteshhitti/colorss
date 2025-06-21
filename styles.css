@@ -1,22 +1,23 @@
 body {
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center center / cover no-repeat fixed;
-  background-attachment: fixed;
+  background: url('./background.png') center center / cover no-repeat fixed;
+  /* background-attachment: scroll; */
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #000;
   font-family: 'Segoe UI', sans-serif;
   color: white; /* Optional */
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  line-height: 1.6;
+  padding-top: 70px;
 }
 
 section {
   padding: 100px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay */
-  backdrop-filter: blur(3px); /* Optional blur */
+  background-color: transparent;
+  backdrop-filter: transparent;
 }
-
-
 
 
 /* Stylish Sticky Contact Button */
@@ -77,13 +78,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  background-color: #000;
-  line-height: 1.6;
-  padding-top: 70px;
-}
 
 /* HEADER */
 .main-header {
@@ -138,7 +132,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url('your-background.jpg') center/cover no-repeat fixed;
+  /* background: url('background.png'); */
   padding: 80px 50px;
 }
 
@@ -214,7 +208,7 @@ body {
 /* ABOUT SECTION */
 .about-section {
   padding: 100px 30px;
- 
+  /* background: url('background.png'); */
   position: relative;
   min-height: 100vh;
 }
@@ -276,7 +270,8 @@ body {
 /* SERVICES SECTION */
 .services-section {
   padding: 100px 30px;
-  
+  background: transparent;
+  /* background: url('background.png'); */
   position: relative;
   min-height: 100vh;
 }
@@ -346,7 +341,7 @@ body {
 
 .coverflow-slider {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+  background: url('background.png') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -440,7 +435,7 @@ body {
 /* CLIENTS SECTION */
 .clients-section {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+  background: url('background.png') center/cover no-repeat;
   background-attachment: fixed;
   text-align: center;
   position: relative;
@@ -496,7 +491,7 @@ body {
 /* gallery Section */
 .gallery-section {
   padding: 100px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat fixed;
+  background: url('background.png') center/cover no-repeat fixed;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   text-align: center;
@@ -552,7 +547,7 @@ body {
 /* machine Section */
 .machine-gallery-section {
   padding: 80px 30px;
-  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
+  background: url('background.png') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
 }
@@ -638,7 +633,7 @@ body {
 
 
  #gallery {
-  background: url('ChatGPT Image Jun 15, 2025, 03_39_58 PM.png') center/cover no-repeat fixed;
+  background: url('background.png') center/cover no-repeat fixed;
   padding: 80px 20px;
   color: #fff;
 }
@@ -950,9 +945,3 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
-
-
-
-
-
-
