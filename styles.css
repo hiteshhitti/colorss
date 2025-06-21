@@ -957,20 +957,25 @@ html {
 /* Machine Specification Table - make responsive */
 .spec-table-wrapper {
   width: 100%;
-  overflow-x: auto;       /* ◀︎ only this section scrolls */
+  overflow-x: hidden;       /* ◀︎ only this section scrolls */
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .spec-table {
   display: block;
   width: max-content;      /* table takes its own width */
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
 .spec-table th,
 .spec-table td {
-  display: block;
-  width: max-content;      /* table takes its own width */
-  border-collapse: collapse;
-  font-size: 0.9rem;
+  white-space: normal;        /* allow wrapping */
+  word-break: break-word;
+  display: -webkit-box;       /* needed for line clamp */
+  -webkit-line-clamp: 2;      /* limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;           /* hide overflow text */
+  padding: 8px 12px;
+  text-align: left;
 }
