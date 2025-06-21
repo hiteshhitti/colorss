@@ -74,6 +74,7 @@ body {
   color: #fff;
   background-color: #000;
   line-height: 1.6;
+  padding-top: 70px;
 }
 
 /* HEADER */
@@ -81,12 +82,13 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   padding: 20px 50px;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: visible;
 }
 
 .logo {
@@ -866,6 +868,10 @@ body {
   color: #fff;
   font-size: 1.8rem;
   cursor: pointer;
+  z-index: 1000;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 @media (max-width: 768px) {
 
