@@ -953,3 +953,24 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+/* Machine Specification Table - make responsive */
+.spec-table-wrapper {
+  width: 100%;
+  overflow-x: auto;       /* ◀︎ only this section scrolls */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.spec-table {
+  display: block;
+  width: max-content;      /* table takes its own width */
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.spec-table th,
+.spec-table td {
+  display: block;
+  width: max-content;      /* table takes its own width */
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
