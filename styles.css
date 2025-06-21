@@ -5,6 +5,9 @@ body {
   background-repeat: no-repeat;
   font-family: 'Segoe UI', sans-serif;
   color: white; /* Optional */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -67,6 +70,11 @@ section {
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
