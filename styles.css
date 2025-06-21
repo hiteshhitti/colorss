@@ -877,15 +877,9 @@ html {
   /* right: 1rem; */
 }
 @media (max-width: 768px) {
-  .nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 1001;
-}
+    body {
+    background: url('./background.png') center top / cover no-repeat scroll !important;
+  }
 
   /* Header & Nav */
   .main-header {
