@@ -877,6 +877,12 @@ html {
   /* right: 1rem; */
 }
 @media (max-width: 768px) {
+  body {
+    /* Disable fixed attachment on mobile for proper resizing */
+    background-attachment: scroll !important;
+    /* Adjust position for phones */
+    background-position: center top !important;
+  }
 
   /* Header & Nav */
   .main-header {
