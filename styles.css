@@ -877,12 +877,15 @@ html {
   /* right: 1rem; */
 }
 @media (max-width: 768px) {
-  body {
-    /* Disable fixed attachment on mobile for proper resizing */
-    background-attachment: scroll !important;
-    /* Adjust position for phones */
-    background-position: center top !important;
-  }
+  .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001;
+}
 
   /* Header & Nav */
   .main-header {
@@ -943,9 +946,6 @@ html {
   .services-container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
   }
 
   /* Clients & Gallery: tighter grid */
