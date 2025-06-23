@@ -1,26 +1,125 @@
-body {
-  background: url('./background.png') center center / cover no-repeat fixed;
-  /* background-attachment: scroll; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #000;
-  font-family: 'Segoe UI', sans-serif;
-  color: white; /* Optional */
+/* RESET & BASE */
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  line-height: 1.6;
-  padding-top: 70px;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: url('ChatGPT Image Jun 15, 2025, 03_39_58 PM.png') center center / cover no-repeat fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  line-height: 1.6;
+  padding-top: 80px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* SECTION OVERLAY */
 section {
   padding: 100px 20px;
-  background-color: transparent;
-  backdrop-filter: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
 }
 
+/* HEADER / NAVBAR */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Stylish Sticky Contact Button */
+/* Logo Style */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo-c {
+  color: #ff5e00;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-sub {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+/* Navigation Links */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-transform: capitalize;
+}
+
+.main-nav a:hover {
+  color: #ff5e00;
+}
+
+/* Responsive Navbar (Mobile) */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .main-nav ul.show {
+    display: flex;
+  }
+
+  .main-header {
+    padding: 10px 20px;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1051;
+    background-color: #ff5e00;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+/* Sticky Contact Button */
 .sticky-contact {
   position: fixed;
   bottom: 25px;
@@ -58,81 +157,20 @@ section {
   }
 }
 
-
-
-
-
-/* RESET & BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Images Responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-
-/* HEADER */
-.main-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  padding: 20px 50px;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: visible;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.logo-c {
-  color: #ff5e00;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.logo-sub {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-}
-
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.main-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.main-nav a:hover {
-  color: #ff5e00;
-}
 
 
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  /* background: url('background.png'); */
+  background: url('your-background.jpg') center/cover no-repeat fixed;
   padding: 80px 50px;
 }
 
@@ -208,7 +246,7 @@ html {
 /* ABOUT SECTION */
 .about-section {
   padding: 100px 30px;
-  /* background: url('background.png'); */
+ 
   position: relative;
   min-height: 100vh;
 }
@@ -270,8 +308,7 @@ html {
 /* SERVICES SECTION */
 .services-section {
   padding: 100px 30px;
-  background: transparent;
-  /* background: url('background.png'); */
+  
   position: relative;
   min-height: 100vh;
 }
@@ -341,7 +378,7 @@ html {
 
 .coverflow-slider {
   padding: 100px 30px;
-  background: url('background.png') center/cover no-repeat;
+  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
   text-align: center;
@@ -435,7 +472,7 @@ html {
 /* CLIENTS SECTION */
 .clients-section {
   padding: 100px 30px;
-  background: url('background.png') center/cover no-repeat;
+  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
   background-attachment: fixed;
   text-align: center;
   position: relative;
@@ -491,7 +528,7 @@ html {
 /* gallery Section */
 .gallery-section {
   padding: 100px 30px;
-  background: url('background.png') center/cover no-repeat fixed;
+  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat fixed;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   text-align: center;
@@ -547,7 +584,7 @@ html {
 /* machine Section */
 .machine-gallery-section {
   padding: 80px 30px;
-  background: url('background.png') center/cover no-repeat;
+  background: url('ChatGPT\ Image\ Jun\ 15\,\ 2025\,\ 03_39_58\ PM.png') center/cover no-repeat;
   background-attachment: fixed;
   color: #fff;
 }
@@ -633,7 +670,7 @@ html {
 
 
  #gallery {
-  background: url('background.png') center/cover no-repeat fixed;
+  background: url('ChatGPT Image Jun 15, 2025, 03_39_58 PM.png') center/cover no-repeat fixed;
   padding: 80px 20px;
   color: #fff;
 }
@@ -863,119 +900,8 @@ html {
   margin-right: 8px;
 }
 
-/* ————————— MOBILE RESPONSIVE ————————— */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 1000;
-  position: fixed;
-  top: 1rem;
-  /* right: 1rem; */
-}
-@media (max-width: 768px) {
-  @media (max-width: 768px) {
-  body {
-    background-attachment: fixed !important;
-    /* background-position: center top; */
-  }
-  /* ... */
-}
 
 
-  /* Header & Nav */
-  .main-header {
-    padding: 15px 20px;
-  }
-  .nav-toggle {
-    display: block;
-  }
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    flex-direction: column;
-  }
-  .main-nav.active {
-    display: flex;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  .main-nav li {
-    margin: 12px 0;
-    text-align: center;
-  }
 
-  /* Hero */
-  .hero-wrapper {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .hero-btn {
-    padding: 10px 20px;
-  }
 
-  /* Sections: less padding */
-  section {
-    padding: 60px 10px;
-  }
 
-  /* About / Services / Why Us */
-  .about-content,
-  .services-container,
-  .content-wrapper {
-    padding: 20px;
-  }
-
-  /* Service boxes stack */
-  .services-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Clients & Gallery: tighter grid */
-  .clients-grid,
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-/* Machine Specification Table - make responsive */
-.spec-table-wrapper {
-  width: 100%;
-  overflow-x: hidden;       /* ◀︎ only this section scrolls */
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-.spec-table {
-  display: block;
-  width: max-content;      /* table takes its own width */
-  table-layout: fixed;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-.spec-table th,
-.spec-table td {
-  white-space: normal;        /* allow wrapping */
-  word-break: break-word;
-  display: -webkit-box;       /* needed for line clamp */
-  -webkit-line-clamp: 2;      /* limit to 2 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;           /* hide overflow text */
-  padding: 8px 12px;
-  text-align: left;
-}
