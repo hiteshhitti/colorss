@@ -222,20 +222,19 @@ img {
   }
 }
 
-
-
-
 /* ABOUT SECTION */
 .about-section {
-  padding: 100px 30px;
- 
   position: relative;
+   background: url('your-background.jpg') center/cover no-repeat fixed;
+  padding: 100px 30px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .about-section .overlay {
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -245,10 +244,11 @@ img {
   max-width: 1000px;
   margin: auto;
   background: rgba(255, 255, 255, 0.05);
-  padding: 40px;
+  padding: 40px 30px;
   border-radius: 10px;
-  
-  animation: fadeInUp 1s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease forwards;
 }
 
 .about-content h1 {
@@ -256,26 +256,18 @@ img {
   color: #ff5e00;
   font-size: 2.5rem;
   margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .about-content p {
   font-size: 1.1rem;
+  line-height: 1.7;
   margin-bottom: 20px;
   color: #ddd;
 }
 
 /* ANIMATIONS */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -286,6 +278,24 @@ img {
     transform: translateY(0);
   }
 }
+
+/* ✅ ONLY ON MOBILE: Reduce side padding */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 30px 15px; /* Reduce left-right padding only */
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
 
 /* SERVICES SECTION */
 .services-section {
@@ -914,10 +924,3 @@ img {
   color: #ff5722;
   margin-right: 8px;
 }
-
-
-
-
-
-
-
