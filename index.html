@@ -51,34 +51,91 @@
   }
 </style>
 
-<!-- Fixed Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-  <span>C</span>olours <span>MEDIA</span>
-</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+
+
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-brand span:first-child {
+      color: #ff6600;
+    }
+
+    .navbar-brand span:last-child {
+      color: #ccc;
+      font-weight: normal;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .offcanvas {
+      width: 100%;
+    }
+
+    .offcanvas .nav-link {
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+
+    .offcanvas .nav-link:hover {
+      color: #ff6600 !important;
+    }
+
+    /* Hide desktop navbar in small screens */
+    @media (max-width: 991.98px) {
+      .desktop-nav {
+        display: none;
+      }
+    }
+
+    /* Hide hamburger in large screens */
+    @media (min-width: 992px) {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span>C</span>olours <span>MEDIA</span></a>
+
+    <!-- Desktop Links -->
+    <div class="desktop-nav">
+      <ul class="navbar-nav flex-row ms-auto">
+        <li class="nav-item px-2"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#clients">Clients</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#footer">Contact</a></li>
       </ul>
     </div>
+
+    <!-- Hamburger Toggle for Mobile -->
+    <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
 
-<!-- Offcanvas Sidebar -->
-<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+<!-- Offcanvas Sidebar for Mobile -->
+<!-- Offcanvas Sidebar for Mobile -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu" data-bs-backdrop="false" data-bs-scroll="true">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title">Menu</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <ul class="navbar-nav">
@@ -93,11 +150,22 @@
 </div>
 
 
-  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Auto-Close Offcanvas on Link Click -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const offcanvasElement = document.getElementById('mobileMenu');
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
-
-
+    document.querySelectorAll('#mobileMenu .nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        bsOffcanvas.hide();
+      });
+    });
+  });
+</script>
 
 <section class="hero" id="home">
   <div class="hero-wrapper">
@@ -244,6 +312,8 @@
     <div class="client-logos"><img src="tulsi.webp" alt="tulsi"></div>
     <div class="client-logos"><img src="KPT PIPES.jpeg" alt="KPT Pipes"></div>
     <div class="client-logos"><img src="bicano.webp" alt="bicano"></div>
+    <div class="client-logos"><img src="best choice himani.webp" alt="best choice "></div>
+    <div class="client-logos"><img src="mykk.webp" alt="myk"></div>
   </div>
 
 </section>
@@ -1085,6 +1155,72 @@
   </div>
 </div>
 
+<div class="gallery-swiper-box">
+  <div class="gallery-swiper-title">FUSION</div>
+  <div class="swiper gallery-swiper-12">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide"><img src="fusion1.jpeg" /></div>
+      <div class="swiper-slide"><img src="fusion4.jpeg" /></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="gallery-swiper-box">
+  <div class="gallery-swiper-title">TULSI</div>
+  <div class="swiper gallery-swiper-12">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide"><img src="tulsi1.jpeg" /></div>
+      <div class="swiper-slide"><img src="tulsi2.jpeg" /></div>
+      <div class="swiper-slide"><img src="tulsi3.jpeg" /></div>
+      <div class="swiper-slide"><img src="tulsi4.jpeg" /></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="gallery-swiper-box">
+  <div class="gallery-swiper-title">KPT PIPES</div>
+  <div class="swiper gallery-swiper-12">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="kpt.jpeg" /></div>
+      <div class="swiper-slide"><img src="kpt2.jpeg" /></div>
+      <div class="swiper-slide"><img src="kpt4.jpeg" /></div>
+      <div class="swiper-slide"><img src="kpt5.jpeg" /></div>
+      
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="gallery-swiper-box">
+  <div class="gallery-swiper-title">BIKANO</div>
+  <div class="swiper gallery-swiper-12">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="bicano4.jpeg" /></div>
+      <div class="swiper-slide"><img src="bicano 5.jpeg" /></div>
+      <div class="swiper-slide"><img src="bicano1.jpeg" /></div>
+      <div class="swiper-slide"><img src="bicano2.jpeg" /></div>
+      <div class="swiper-slide"><img src="bicano3.jpeg" /></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="gallery-swiper-box">
+  <div class="gallery-swiper-title">UNIKO</div>
+  <div class="swiper gallery-swiper-12">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="UNIKO1.jpeg" /></div>
+      <div class="swiper-slide"><img src="UNIKO2.jpeg" /></div>
+      
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
     
 
     </div>
@@ -1166,8 +1302,3 @@
 
 </body>
 </html>
-
-
-
-
-
