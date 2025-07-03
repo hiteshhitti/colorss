@@ -282,7 +282,7 @@ img {
 /* ✅ ONLY ON MOBILE: Reduce side padding */
 @media (max-width: 768px) {
   .about-content {
-    padding: 30px 15px; /* Reduce left-right padding only */
+    padding: 30px px; /* Reduce left-right padding only */
   }
 
   .about-content h1 {
@@ -299,7 +299,7 @@ img {
 
 /* SERVICES SECTION */
 .services-section {
-  padding: 100px 30px;
+  padding: 80px 20px;
   
   position: relative;
   min-height: 100vh;
@@ -333,9 +333,9 @@ img {
 .service-box {
   background: rgba(255, 255, 255, 0.03);
   border-left: 4px solid #ff5e00;
-  padding: 25px 30px;
+  padding: 25px 10px;
   margin-bottom: 40px;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
@@ -351,7 +351,7 @@ img {
 }
 
 .service-box p {
-  font-size: 1.05rem;
+  font-size: 1.03rem;
   color: #ddd;
   line-height: 1.7;
 }
@@ -362,6 +362,21 @@ img {
   color: #fff;
   overflow: hidden;
   text-align: center;
+}
+
+/* ✅ ONLY ON MOBILE: Reduce side padding */
+@media (max-width: 768px) {
+  .service-box{
+    padding: 20px 1px; /* Reduce left-right padding only */
+  }
+
+  .service-box h {
+    font-size: 2rem;
+  }
+
+  .service-box p {
+    font-size: 1rem;
+  }
 }
 
 /* ===============================
