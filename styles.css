@@ -939,3 +939,26 @@ img {
   color: #ff5722;
   margin-right: 8px;
 }
+/* ✅ Mobile Padding Fix */
+@media (max-width: 768px) {
+  body,
+  section,
+  .about-content,
+  .services-container,
+  .clients-section,
+  .gallery-section,
+  .machine-gallery-section,
+  .coverflow-slider {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .hero {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .hero-content {
+    padding: 0px !important;
+  }
+}
