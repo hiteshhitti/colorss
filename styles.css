@@ -206,11 +206,13 @@ img {
   .hero-wrapper {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .hero-content,
   .hero-image {
     flex: 1 1 100%;
+    justify-content: center;
   }
 
   .hero-content h1 {
@@ -219,6 +221,7 @@ img {
 
   .hero-image img {
     max-width: 80%;
+    margin: 0 auto;
   }
 }
 
